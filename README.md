@@ -4,7 +4,7 @@ This project is a Node.js application that extracts posts from the most popular 
 
 ## Features
 
-- Flexibly search for 'general' threads on any 4chan board
+- Flexibly search for 'general' threads or any thread by subject on any 4chan board
 - Specify multiple subject texts to match threads subject line
 - Automatically finds the most popular matching thread
 - Extracts all posts from the thread, including text and image information
@@ -12,7 +12,7 @@ This project is a Node.js application that extracts posts from the most popular 
 
 ## Todo
 
-- improve the formatting of the extracted text
+- Improve the formatting of the extracted text
 
 ## Prerequisites
 
@@ -100,11 +100,3 @@ This will execute the script and print the extracted posts to the console.
      "Fortnite General",
    ]);
    ```
-
-## License
-
-This project is licensed under the MIT License.
-
-## Disclaimer
-
-This project is for educational purposes only. Be sure to comply with 4chan's terms of service and robots.txt file when using this script. The author is not responsible for any misuse of this tool.
