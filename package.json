@@ -1,0 +1,20 @@
+{
+  "name": "4chan-thread-extractor",
+  "version": "1.0.0",
+  "description": "A tool to extract posts from specific threads on 4chan boards",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "4chan",
+    "web-scraping",
+    "playwright"
+  ],
+  "author": "ausboss",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.32.0"
+  }
+}
