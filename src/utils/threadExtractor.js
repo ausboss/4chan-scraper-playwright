@@ -3,7 +3,7 @@ import { chromium } from "playwright";
 async function extract4chanThread(board, subjectTexts) {
   const browser = await chromium.launch();
   const page = await browser.newPage();
-  let extractedText = "";
+  let extractedPosts = [];
 
   try {
     await page.goto(`https://boards.4chan.org/${board}/catalog`);
@@ -60,7 +60,7 @@ async function extract4chanThread(board, subjectTexts) {
     await page.goto(`https:${threadUrl}`, { timeout: 30000 });
 
     // Extract all posts
-    const posts = await page.$$eval(".post", (elements) => {
+    extractedPosts = await page.$$eval(".post", (elements) => {
       return elements.map((el) => {
         const postInfo = el.querySelector(".postInfo");
         const postMessage = el.querySelector(".postMessage");
@@ -86,25 +86,14 @@ async function extract4chanThread(board, subjectTexts) {
         return { name, dateTime, postId, message, imageInfo };
       });
     });
-
-    // Format the extracted posts
-    posts.forEach((post) => {
-      let formattedPost = `${post.name} ${post.dateTime} No.${post.postId}\n`;
-      formattedPost += `${post.message}\n`;
-      if (post.imageInfo) {
-        formattedPost += `Image: ${post.imageInfo.filename} (${post.imageInfo.url})\n`;
-      }
-      formattedPost += "---\n";
-      extractedText += formattedPost;
-    });
   } catch (error) {
     console.error("An error occurred:", error);
-    extractedText = `Error: ${error.message}`;
+    extractedPosts = [{ error: error.message }];
   } finally {
     await browser.close();
   }
 
-  return extractedText;
+  return extractedPosts;
 }
 
 export { extract4chanThread };

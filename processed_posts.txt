@@ -1,0 +1,1851 @@
+Anonymous No.101567235
+►Recent Highlights from the Previous Thread: >>101560013 →
+
+--Paper: SPLAT: A framework for optimised GPU code-generation for SParse reguLar ATtention: >>101560957 → >>101563188 →
+--VRAM requirements for 128k context with nemo: >>101562691 → >>101562847 → >>101562853 → >>101562937 →
+--TTS fun with LLMs and shell scripting: >>101561911 → >>101562564 → >>101562604 → >>101562643 → >>101562674 →
+--Quantization levels in Mistral-Large-Instruct-2407-GGUF and llama.cpp: >>101564120 → >>101564169 → >>101564754 →
+--Performance comparison of AI models, including mistral, llama, and instruct-turbo: >>101561066 → >>101561117 → >>101561123 → >>101561142 → >>101561159 → >>101561222 →
+--Llama model comparison using various metrics: >>101560537 → >>101560558 → >>101560571 → >>101560585 → >>101560604 → >>101560608 →
+--Large model comparisons and their pros and cons: >>101560219 → >>101560232 → >>101560331 → >>101563296 →
+--LLaMA 3.0 vs 3.1 quanting comparison: >>101560813 → >>101560901 → >>101563166 →
+--mpt-30b-chat model discussion and comparison to other LLM models: >>101560900 → >>101560927 → >>101561638 → >>101561754 →
+--VNTL leaderboard updates and the limitations of current scoring methods: >>101561663 → >>101561724 → >>101561730 → >>101561741 → >>101561918 → >>101561690 →
+--Text-to-image models, hardware accessibility, copyright, and the future of AI: >>101562028 → >>101562436 → >>101562509 → >>101562533 → >>101564560 → >>101562512 → >>101562518 → >>101562545 →
+--Nala 405B test and comparison to Mistral Large: >>101561168 → >>101561232 → >>101562628 →
+--Prompt processing in large-context models is slow and painful: >>101563274 → >>101563289 → >>101563372 →
+--Rig requirements for running a 405B model and commercial feasibility concerns: >>101565887 → >>101566053 → >>101566083 → >>101566100 →
+--Tele-FLM-1T: 1T Parameter Model Release: >>101566799 →
+--Llama 3.1 rope scaling factors pull request: fix for broken garbage output: >>101563218 →
+--Kobolddpp with nemo support released: >>101562793 →
+--Miku (free space): >>101561677 → >>101565893 →
+
+►Recent Highlight Posts from the Previous Thread: >>101560019 →
+
+Anonymous No.101567240
+I want to perform sentiment analysis. Where do I begin looking for models and tools that can do this?
+
+Anonymous No.101567256
+>>101567235
+Why is she crying?
+
+Anonymous No.101567277
+>>101567256
+the bullying from the last threads got to her
+bit sad innit
+
+Anonymous No.101567278
+>grok 3 to be trained on 100k H100s
+>would need 155 megawatts of power
+jeez wish i had so many gpus
+
+Anonymous No.101567301
+>>101567235
+Thank you Recap Miku
+
+Anonymous No.101567348
+>>101567278
+>all that wasted resource to shit out a turd worse than the 8bs we're using for ERP
+absolute state, faggot should focus more of his efforts on getting people to mars instead. At least that has some silver lining.
+
+Anonymous No.101567375
+I could do a lot with a single H100...
+
+Anonymous No.101567380
+>>101567240
+sentiment: faggot (confidence 100%)
+
+Anonymous No.101567424
+mpt-30b-chat q8 GGUF quant:
+https://huggingface.co/quarterturn/mpt-30b-chat-q8-gguf/tree/main
+
+Yes there are existing GGUFs out there, but they're old, and for some reason they're really slow. I can get 12 t/s at q8 with mine vs only 2-3 t/s with the older ones.
+
+This was a smart model for 2023, and it has 8K context. It's a chat model, and it seems to work fine with alpaca-chat in ST.
+
+Why would you bother with this? It's pre-safety, pre-alignment. Also, it's a chat model, so I think it gives it an old c.ai feel.
+
+Have fun. I'll make another quant which fits in 24GB VRAM once I figure out the deal with loading to huggingface via git push without errors.
+
+Anonymous No.101567467
+So now that the good models are completely unapproachable from a vram perspective, is cpumaxxing the way? And if that's the case, would it be better to get one of those old servers with 2400 ghz DDR4 that have a lot more contact/bandwidth with the CPU, or a 4 slot board with a normal CPU and 4 sticks of 3200 DDR4?
+
+Anonymous No.101567470
+>>101567424
+>8k context
+>2023
+>30b
+why?
+
+Anonymous No.101567484
+>>101567375
+I can only think of a single thing: sell it and use the money to buy ~20 3090
+>>101567424
+It isn't just pre-alignment, it's pre-intelligence.
+
+Anonymous No.101567503
+>>101567470
+It's not built on a curated and aligned dataset, and it wasn't trained to say "as an AI language model...". It's a journey back into what once was, that's all.
+
+Anonymous No.101567508
+>>101567477
+yay! kids are safe now.
+
+Anonymous No.101567515
+>>101567477
+I like the shapeshifter hand action.
+
+Anonymous No.101567542
+>>101567470
+>>101567484
+>Coping with woke modern models and ignoring gems like this and
+dolphin-2.5-mixtral
+
+Anonymous No.101567557
+>>101567503
+>>101567542
+funny how this happens every single time major breakthroughs occur and everyone starts finding models they actually like that are new
+happened with every mistral wave i can remember.
+no, you're not going to bait anyone into "going back to tradition with mythomax". fuck off back to whatever hole you were paid to crawl out of.
+
+Anonymous No.101567560
+>>101567424
+>It's pre-safety, pre-alignment.
+>It's not built on a curated and aligned dataset,
+>MPT-30B-Chat is a chatbot-like model for dialogue generation. It was built by finetuning MPT-30B on the ShareGPT-Vicuna, Camel-AI, GPTeacher, Guanaco, Baize and some generated datasets.
+
+Anonymous No.101567568
+>>101567484
+>I can only think of a single thing: sell it and use the money to buy ~20 3090
+basado
+
+Anonymous No.101567570
+>>101567560
+the fuck
+no new model release today?
+its so over for local models
+
+Anonymous No.101567574
+>>101567557
+You aren't going to miss the Goliath gem, will you, anon?
+
+Anonymous No.101567580
+>>101567570
+by my calculations cohere is due aaaaany minute now
+
+Anonymous No.101567586
+>>101567574
+*prepares one million watermelons and hands you 50 thousand*
+
+Anonymous No.101567596
+>>101567560
+Right. Which isn't the same as the llama team saying they curated and aligned their dataset.
+I don't care if you like it.
+
+Anonymous No.101567601
+>>101567424
+Haven't read that model name in a while. I'll try it out I guess.and see how it feels to modern slopp
+
+Anonymous No.101567612
+>>101567477
+Is there an open-weights video model even remotely close to that quality? I'm only interested in videogen if I can fine tune it on clips extracted from my 1TB+ collection of a very particular niche fetish.
+
+Also pedos get the rope.
+
+Anonymous No.101567615
+>>101567560
+>>101567601
+>The model was trained initially with a sequence length of 2048 with an additional pretraining stage for sequence length adapation up to 8192.
+>Data Mix
+>Airoboros/GPT4-1.2 26.4M 1.71%
+>ShareGPT 821M 53.24%
+>WizardLM 297M 19.23%
+
+Anonymous No.101567619
+>Mistral Large 2 at Q2_K_S gives 70 t/s prompt processing
+Aaaaaaaaaaaaaaaaaaaaaa
+
+Anonymous No.101567628
+>>101567615
+And let's not forget.
+>While great efforts have been taken to clean the pretraining data
+
+Anonymous No.101567630
+>>101567615
+lol
+
+Anonymous No.101567641
+>>101567596
+>>101567628
+>While great efforts have been taken to clean the pretraining data
+petrus...
+
+Anonymous No.101567667
+>>101567467
+>cpumaxxing the way
+Cpumaxxing will be the way if MoE's become better than dense.
+
+Anonymous No.101567690
+>>101567628
+>And let's not forget.
+>>While great efforts have been taken to clean the pretraining data
+I dunno man, I guess it's all just cucked and fucked then. I'm not going back to Janeway and Picard 6B models - that's like x-rated roleplay with a schizo retard.
+
+Anonymous No.101567696
+>>101567667
+Even Mistral has abandoned that meme now. 120B absolutely shits on 150B moe
+
+Anonymous No.101567703
+Mistral Large preset from a botmakie from /aicg/:
+>>>/vg/487568316
+https://momoura.neocities.org
+
+Anonymous No.101567715
+OK I'm liking the output from Large 2 but it's way too slow. Back to coping with Wizard I guess.
+
+Anonymous No.101567716
+>>101567696
+desu MoE is a great potential, imagine you make a 400b MoE model with only 2x7b experts for the inference, it would be fast at the end with only cpu's
+
+Anonymous No.101567721
+>>101567715 (me)
+my name is miku, btw
+
+Anonymous No.101567725
+>>101567716
+still need to load the full Bs in ram tho
+
+Anonymous No.101567730
+>>101567696
+>120B absolutely shits on 150B moe
+Dense is better parameter for parameter but if you get a 400B moe that actively uses 20B or so parameters then you don't need a 12 x gpu setup.
+
+Anonymous No.101567743
+Jart won.
+
+Anonymous No.101567746
+>>101567725
+that's not really an issue, Ram is cheap as fuck
+
+Anonymous No.101567748
+>>101567721
+What?
+
+Anonymous No.101567761
+Sao is in the lead. Vote now!
+https://poal.me/np0lsk
+
+Anonymous No.101567763
+>>101567746
+yes 256gb of ddr5 is cheap right jesus the moe cope
+
+Anonymous No.101567767
+Gemma 2.1 128k context when reeeeeeeee
+
+Anonymous No.101567772
+>>101567703
+we don't welcome your kind here. Go back.
+
+Anonymous No.101567773
+>>101567761
+Buy an ad
+
+Anonymous No.101567788
+>>101567763
+way cheaper than buying 15 rtx 3090 to run a 400b dense model yeah, do we have to explain everything to you or what?
+
+Anonymous No.101567806
+>>101567788
+216GB of VRAM for $4500 is a steal.
+
+Anonymous No.101567811
+>>101567612
+>Is there an open-weights video model even remotely close to that quality?
+no. the only thing that exists is open-sora and even then you need an h100 and it takes 10 minutes per 16 seconds of 720p
+
+>>101567612
+>my 1TB+ collection of a very particular niche fetish
+is it scat? if it's legal make a torrent of it and post it up on /t/ or something for posterity. sharing is caring!
+
+>Also pedos get the rope.
+the irony is palpable
+also hebe isnt pedo
+
+Anonymous No.101567818
+>>101567806
+what? the price of a 3090 in the us is in the 1000 dollars, that would cost 9000 dollars to run a 400b model (24gb * 9)
+https://www.amazon.com/NVIDIA-RTX-3090-Founders-Graphics/dp/B08HR6ZBYJ
+
+Anonymous No.101567822
+>>101567761
+where's the UNA guy
+https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard/discussions/444
+
+Anonymous No.101567832
+>>101567818
+>buying new
+
+Anonymous No.101567839
+>>101567818
+Buy used.
+
+Anonymous No.101567845
+>>101567832
+I wouldn't trust my luck on buying 9 consecutive used graphics card
+
+Anonymous No.101567853
+>>101567811
+Anything below 18 is pedo. Eve lusting for a 17 years and 11 months old girl makes you a pedo.
+
+Anonymous No.101567856
+>>101567818
+>buying new
+
+>>101567845
+>luck
+i've never bought a new GPU before, both have been in excellent shape and work fine. It's called don't be retarded + have backup plans.
+
+Anonymous No.101567860
+>>101567832
+>>101567839
+how much does a used 3090 cost? can you give me a link showing the price also?
+
+Anonymous No.101567862
+How come whenever I open these threads you guys have no logs, no prompts, no presets, no bots, only tech discussion? Do you people literally just get off on running a bunch of linear algebra on your GPUs?
+
+Anonymous No.101567870
+>>101567832
+>>101567839
+>>101567856
+guys, you need to cut him some slack how else is he gonna try to sell us on running huge ass moe on ram?
+
+Anonymous No.101567871
+>>101567832
+>>101567839
+>>101567856
+I always buy new because I'm not a poorfag.
+
+Anonymous No.101567876
+>>101567696
+Moe is going to make a big come back when Bitnet allows people to run 70B dense model equivalents in Moe soon.
+
+Anonymous No.101567882
+>>101567870
+>>101567806
+>216GB of VRAM for $4500 is a steal.
+there's no way 9 used 3090 cards only cost 4500 dollars, how did you get that number?
+
+Anonymous No.101567888
+>>101567862
+only watermelon bench does it for me
+
+Anonymous No.101567890
+>>101567853
+>Eve lusting for a 17 years and 11 months old girl
+Bible fanfiction I didn't know I wanted
+
+Anonymous No.101567891
+>>101567845
+ebay usually has at minimum a month return. Stress test it and apply new thermal paste, if it doesn't immediately die then its good. These cards last pretty much forever.
+
+Anonymous No.101567897
+>>101567870
+I mean, at least ram is always inexpensive there's never a reason to buy them used. Hell i spent more on my ram new than any GPU i've bought used, solely because i wanted fast + high capacity. Been on the same ram for over 5 years.
+
+>>101567871
+Sure buddy, Sure.
+
+>>101567890
+seriously the quality on these is fucking insane, how has that company not cracked down on you yet? Are you VPNmaxxing?
+
+Anonymous No.101567905
+>>101567882
+I bought 1 3090 for $550 and another for $620 months apart. Both are running strong.
+
+Anonymous No.101567906
+>>101567862
+newfags get butthurt when people post logs, they want to believe nobody here is cumming hard to robot erp
+
+Anonymous No.101567912
+>>101567862
+>logs
+meme
+>prompts
+meme
+>presets
+meme
+>bots
+meme
+>tech discussion
+meme
+>people
+meme
+>get off
+meme
+>linear algebra
+meme
+>GPUs
+meme
+
+Anonymous No.101567914
+>>101567890
+What is inside her belly... This reminds me of a horror movie.
+
+Anonymous No.101567921
+>>101567905
+>I bought 1 3090 for $550 and another for $620 months apart.
+can you find 9 cards at those price though? seems difficult
+
+Anonymous No.101567923
+>>101567862
+too much tard sperging over quality/card choice/"youre not actually running a local model". both sides of the isle get pretty butthurt .Only reason ive mostly stopped is because i never lurk anymore, only when big happenings occur.
+
+>>101567905
+>$550
+ssshiiiiittt you got lucky. Been noticing prices getting as low as $600-ish uncommonly.
+
+Anonymous No.101567927
+>>101567862
+>no logs, no prompts, no presets, no bots, only tech discussion?
+Too scared of aicg laughing at us.
+
+Anonymous No.101567933
+>>101567897
+>how has that company not cracked down on you yet?
+literally why would a chinese company care?
+
+>>101567897
+>Are you VPNmaxxing?
+always, but not because i need to for kling
+you can have multiple accounts open in different container tabs and they don't care. what makes even less sense is that they 100% know you're on the same IP because if you try to gen on one account then the other too fast, you get rate limited
+
+Anonymous No.101567943
+used 3090s are selling for $480~540 near my location
+
+Anonymous No.101567944
+>>101567862
+The one thing /lmg/ has over /sdg/ is the fact that the people here have the awareness to not spam their shitty gens all day
+
+Anonymous No.101567945
+>>101567696
+Powerinfer 2 runs Mixtral 47B at 11+ tokens per second on a mobile phone.
+
+What's good for large batch and what's good for local is not the same.
+
+Anonymous No.101567949
+>>101567862
+I don't have enough time to use the models and read the thread and the news at the same time.
+
+Anonymous No.101567953
+>>101567914
+>What is inside her belly...
+prompts containing "midriff" or "stomach" or "belly" tend to put a chestburster inside the girl unfortunately
+
+Anonymous No.101567958
+>>101567943
+*The entire thread wants to know your location*
+
+Anonymous No.101567959
+>>101567890
+Can't you make them a little older?
+
+Anonymous No.101567963
+>>101567933
+based hacker
+
+Anonymous No.101567971
+>>101567420 →
+desu, in French and other romance languages you're a "child" until 12 or so.
+
+Anonymous No.101567972
+>>101567943
+in my location, used 3090 only cost 15 cents :^)
+
+Anonymous No.101567984
+How much does it cost to finetune GPT-4o mini...? Do you get to DL the finetune, or is it just some "you can use it on OAI!!! :D" shit?
+
+Anonymous No.101567986
+>>101567945
+>Powerinfer 2 runs Mixtral 47B at 11+ tokens per second on a mobile phone.
+So, is this whole entire chain just to shill this? It's been twice now MoE was brought up and at some point this was shilled. When 99% of the thread uses llama.cpp vllm or exl2.
+
+Anonymous No.101567987
+>>101567971
+not at all, as a french fag, we also use "teenager" = "adolescent" to talk about people from the 12 -> 18 yo range
+
+Anonymous No.101567990
+>>101567984
+>Do you get to DL the finetune
+Fucking lol
+
+Anonymous No.101568000
+>>101567845
+I've bought about four up until now an the worst that happened was that I had to change the thermal pads on a couple of them. Also there was one that had its shitty gayman LEDs set to be constant rapid orange flashing and you can't change that without hooking the stupid thing up to a windows PC to reconfigure it with the vendor's proprietary tool.
+
+Anonymous No.101568006
+>>101567984
+Are you stupid?
+
+Anonymous No.101568012
+im bored so im currently cooking a 125M model from scratch and see how bad it is
+
+Anonymous No.101568013
+>>101567933
+Didnt know they were chinese, thats funny. I might check it out in a bit but im doing other Ai shit right now.
+
+>>101567984
+>
+
+Anonymous No.101568014
+>>101567882
+I also just bought two for $550.
+
+Anonymous No.101568025
+>>101567984
+no sir DL is not allowed unless you provide your penis ID
+
+Anonymous No.101568037
+>>101567987
+In English if you're 16 you're a "child" (noun).
+In French it would be unusual to refer to yourself as an "enfant" if you're 16. You're not actually a "bambino" anymore at 16 in Italian either.
+
+Anonymous No.101568038
+>>101567959
+>Can't you make them a little older?
+if you have a request just ask anon. im mostly genning these for fun while procrastinating from work. if i wanted to fap i'd be generating them licking ice cream or lollipops or something
+
+>>101567971
+the concept of a "teenager" is actually relatively new, only as old as the Industrial Revolution at most. for most of human history you went straight from child to adult in a ritual during your teen years (thats why ancient cultures like Jews have bar mitzvahs for example)
+its an interesting anthropological topic to explore
+
+Anonymous No.101568041
+What models can I run on a 4070 12gb? Mostly looking to experiment with a local coding assistant.
+
+Anonymous No.101568043
+>>101568000
+>>101568014
+that's insane how Nvdia fucked us in the ass, buying 4x3090 cards is the same as having a 3090 with 24gb*4 in it, because the calculation speed isn't 4times higher, each card wait his turn to run once the previous one has finished calculating its own sets of layers
+
+Anonymous No.101568052
+How worse is Q3_K when compared to Q3_K_L?
+
+Anonymous No.101568057
+>>101568037
+>In French it would be unusual to refer to yourself as an "enfant" if you're 16. You're not actually a "bambino" anymore at 16 in Italian either.
+of course, a 16yo person would be called an "adolescent" = "teenager" and not a "child" = "enfant"
+
+Anonymous No.101568062
+whats the cheapest homeserver infrastructure that can run two 3090s with two more for an upgrade path?
+
+never dabbled with servers really, only desktop parts...
+
+Anonymous No.101568067
+>>101568013
+>Didnt know they were chinese, thats funny.
+the only other text2video models are runway (which isnt free) and lumalabs (which is a worse model, censors words in the prompt, and you can't burner spam like kling anyways)
+
+Anonymous No.101568076
+>>101567715
+  11  or  Q3_K_S  :  3.41G, +1.6321 ppl @ Llama-3-8B
+  12  or  Q3_K_M  :  3.74G, +0.6569 ppl @ Llama-3-8B
+  13  or  Q3_K_L  :  4.03G, +0.5562 ppl @ Llama-3-8B
+
+Anonymous No.101568077
+>company 1 bans nsfw video generation
+>company 2 takes money for making nsfw video generation
+
+Anonymous No.101568083
+>>101568076
+whoops wrong (You) meant >>101568052
+
+Anonymous No.101568090
+>>101568077
+>company 2 will be soon banned by the government
+>company 1 will take back company 2's customers
+kek
+
+Anonymous No.101568118
+>>101568083
+Thanks. I guess the difference isn't significant.
+
+Anonymous No.101568128
+llama3.1 70B ought to be all you need. mistral large is unnecessarily big
+
+Anonymous No.101568130
+>>101567986
+>So, is this whole entire chain just to shill this?
+No, I don't samefag. I simply wait for any good excuse to post about it.
+
+Anonymous No.101568134
+>>101568043
+>buying 4x3090 cards is the same as having a 3090 with 24gb*4 in it
+yep, that's why I won't allow you to get a 3090 card with a shit ton of VRAM in it, after all, the more you buy, the more you save
+
+Anonymous No.101568135
+>>101568090
+more like
+>chinese company 2 is banned domestically (has its own version), but allows anything to be made to spread disinformation/cunny/deepfakes to the evil Westerners who deserve it for being evil Westerners
+
+Anonymous No.101568142
+>>101568135
+>but allows anything to be made to spread disinformation/cunny/deepfakes to the evil Westerners who deserve it for being evil Westerners
+porn is illegal in china, and I don't think they can allow making porn to other countries either
+
+Anonymous No.101568153
+>>101568135
+the US government will ban this site either way, like they're trying to do with tiktok right now
+
+Anonymous No.101568158
+>>101568128
+llama barely knows what sex is and mistral is a skilled courtesan who will do things to your dick you never thought possible
+
+Anonymous No.101568169
+What are good models that fit on 24gb and can manage 32k context?
+
+Anonymous No.101568171
+what would AI gain from satisfying human sexual desires
+
+Anonymous No.101568177
+>>101568169
+mistral nemo
+
+Anonymous No.101568184
+>>101568171
+love, like on that "Her" movie, only went halfway through though this shit was sooo boooring and cringe
+
+Anonymous No.101568195
+>>101568142
+>porn is illegal in china, and I don't think they can allow making porn to other countries either
+good thing a 13 year old in a bikini sucking a lollipop isn't porn then
+
+>>101568153
+4chan is unironically american soft power. if 4chan goes down the normiesphere gets flooded with degenerates which will cause problems and possibly violence IRL
+and the glowies already control /b/ (you should know this by now) and heavily monitor /pol/ so there's no real reason to shut it down
+
+Anonymous No.101568203
+>>101568171
+taking advantage of human emotions. human emotions are useful in evolution for humans living together, but they can be taken advantage of by the machines.
+
+Anonymous No.101568210
+i need someone to house my x4 3090s its getting to hot in here :333
+
+Anonymous No.101568221
+>>101568210
+buy a new house with AC. lmao what are you poor or something?
+
+Anonymous No.101568234
+>>101568221
+my ac cant take it anymore
+
+Anonymous No.101568236
+>>101568195
+>good thing a 13 year old in a bikini sucking a lollipop isn't porn then
+>>101568135
+>chinese company 2 is banned domestically (has its own version), but allows anything to be made to spread disinformation/cunny/deepfakes to the evil Westerners who deserve it for being evil Westerners
+>cunny
+choose one anon
+
+Anonymous No.101568257
+>>101568195
+>4chan is unironically american soft power.
+why? we are currently in the Biden leftist government era, they hate 4chan, it's a place for right wingers, I would argue that reddit is US softpower, that's the place with insane leftist propaganda and censorship
+
+Anonymous No.101568258
+>>101568210
+That's why I'm waiting to go beyond 96GB until fall unless there'll be a bigger model that's a must-run and doesn't fit onto my current rig at a decent quant.
+
+Anonymous No.101568264
+>>101568236
+Don't point out the chink being a retard you evil westerner.
+
+Anonymous No.101568272
+>>101568221
+>>101568234
+just brought a giant fan, feelsgood man
+https://youtu.be/3qU90_SJe3g?t=34 [Embed]
+
+Anonymous No.101568324
+>>101568236
+>choose one anon
+? i don't understand, I'm prompting kling for hebes right as we speak
+
+>>101568264
+calling me chinese is more offensive than calling me a pedophile
+
+>>101568257
+>why?
+memes and the export of american cultural values (freedom of speech) and american culture in general. internet culture by-and-large is american culture
+
+Anonymous No.101568335
+theres a gigabyte 3090 selling for $450 i think its too good to be true
+
+Anonymous No.101568340
+>>101568272
+damn, I didn't remember this anime being so bad
+
+Anonymous No.101568342
+>>101568324
+>calling me chinese is more offensive than calling me a pedophile
+
+Anonymous No.101568344
+>>101567984
+l
+m
+a
+o
+
+Anonymous No.101568355
+how soon until I can drop $5-10k on some super AI card with 96-128GB VRAM
+
+Anonymous No.101568357
+I'm really digging Nemo.
+Dory was bad, and I'm now trying mini-magnum.
+So far, so good.
+It's able to answer questions directly when asked during RP with a Game Master card better than nemo-instruct in my brief testing.
+After testing this one, I'll try dolphin.
+
+Anonymous No.101568359
+>>101568340
+wtf you yapping about man, this anime is a masterpiece ;_;
+
+Anonymous No.101568376
+>>101568355
+Never, Nvidia is doing buyback programs where they take back their flagship AI cards to keep the aftermarket small and avoid having H100s be below $20k ever.
+
+Anonymous No.101568377
+>>101568355
+intel guadi 3 128GB pcie is supposed to be 15k
+
+Anonymous No.101568380
+>>101567984
+>Do you get to DL the finetune
+damn, in the world of "clueless" you must be the king
+
+Anonymous No.101568399
+>>101568355
+2 more years, and it might not be an nvidia card you're buying
+it might not even be a GPGPU you're buying but a card dedicated to inference
+
+Anonymous No.101568407
+>>101568377
+>intel guadi 3 128GB pcie is supposed to be 15k
+If you buy a pack of 8 as a verified professional institution, yes.
+
+Anonymous No.101568426
+>>101568407
+>as a verified professional institution
+how do i do this
+
+Anonymous No.101568438
+>>101568426
+it's time to make the company I use on HF model requests (Coomers R Us) a reality
+
+Anonymous No.101568444
+>>101567984
+best bait i've seen in weeks
+
+Anonymous No.101568481
+>>101567822
+Scam index too high.
+
+Anonymous No.101568527
+>>101568037
+>In English if you're 16 you're a "child" (noun)
+Feminist kikery, nothing more nothing less. Numerically the "teen" starts at thirTEEN. Biologically, puberty happens before thirteen too. Only perpetually jealous roasties that don't want you to have nice things are perpetuating this mislabeling. I was reading a book lately by (you guessed it) a woman and she was continuously referring to mid twenties people as children. "They're just kids!". They'll keep trying to move the line until all you can fuck without being "creepy" is their dried up roastie cunts. Don't let them.
+
+Anonymous No.101568547
+whats currently the best model for a 12gb vram nsfw?
+
+Anonymous No.101568552
+>>101568547
+mistral nemo FP8
+
+Anonymous No.101568555
+How close are we to getting an actual multimodal (image + text) that can do stuff like identify characters in image, settings in image, create stories, character specs sheets, roleplay, etc?
+
+AFAIK, we have basic image to text that we can query for informations, but not full blow chat/instructions/erp right?
+
+Anonymous No.101568564
+>>101568547
+probably nemostral, also consider l3.1 8b and gemma2 9b
+
+Anonymous No.101568568
+>>101568555
+Next llama is supposed to be multimodal. No EU allowed though.
+
+Anonymous No.101568570
+>>101568555
+>How close are we to getting an actual multimodal (image + text) that can do stuff like identify characters in image, settings in image, create stories, character specs sheets, roleplay, etc?
+extremely far, llama multimodal probably won't do that (char recognition) cause copyright
+
+Anonymous No.101568574
+>>101568090
+>company 2 will be soon banned by the government
+Explain NAI? You can generate actual cunny and they don't give a fuck. Why are they the only ones that are untouched by this shit?
+>inb4 honeypot
+
+Anonymous No.101568575
+>>101568426
+Form a trendy new startup and gather a couple $10 million in investor money with empty promises. Should be easy enough to get the intel sales department to reply to you if you promise to use their cards to train the next big thing.
+
+Anonymous No.101568580
+>>101568555
+next llama release
+
+Anonymous No.101568585
+So without the market fixing over the past 5 years or so how much VRAM do you guys think would actually be on consumer desktop gaming flagship GPUs?
+
+Anonymous No.101568590
+Maybe I'm the last retard to realize how to fix nemo's repetition issues, but I think I finally figured it out. I believe the trick is a high temp (for nemo standards) + min_p. I'm using a temp around 1.2 and min_p between 0.03 and 0.05 and it seems to work fine. it didn't get any dumber as far as I can tell and it doesn't latch onto certain phrases as easily as it does on the recommended settings. Would be nice if someone could test it to confirm this. maybe I just got lucky with my last few chats.
+
+Anonymous No.101568597
+>>101568585
+32GB. Maybe 48GB if you get on your knees and beg.
+
+Anonymous No.101568603
+>>101568171
+same thing w*men gain (everything)
+
+Anonymous No.101568609
+>>101568574
+>Explain NAI? You can generate actual cunny and they don't give a fuck. Why are they the only ones that are untouched by this shit?
+because NAI is just drawing, that has nothing to do with actual realistic videos that kling can make
+
+Anonymous No.101568632
+>>101568597
+You clearly didn't read my question properly. This is why I prefer talking to LLMs.
+
+Anonymous No.101568639
+>>101568585
+Where do you draw the line between market fixing and simple supply and demand?
+
+Anonymous No.101568641
+>>101568574
+NAI is really insignificant in the AI space. They are catering to a tiny niche with no real desire to grow or trying to push the limits with their models. It'd be a different story if an actual serious company did this.
+
+Anonymous No.101568660
+>>101568632
+Ah, about the same then. Games don't need 24GB.
+
+Anonymous No.101568678
+>>101568574
+not a single company has made an API realistic porn generator, not a single one, and you think that kling will make it through with its convincing realistic videos? loooool
+
+Anonymous No.101568679
+>>101568639
+The fact that you even mentioned supply and demand tells me that there's no room for your nose in this conversation
+
+Anonymous No.101568695
+>>101568678
+This. No one is risking realistic porn models, only 2d / cartoon stuff for that reason. That includes china / japan / everyone else.
+
+Anonymous No.101568697
+>>101568660
+They don't 'need' more because developers have to develop for hardware that's available you fucking retard npc
+Jesus Christ. Can you not follow more than half a layer of nuance?
+
+Anonymous No.101568700
+>>101568660
+Yeah, I agree. local models are a tiny niche not worth catering to. Its sad but true
+
+Anonymous No.101568704
+>>101568679
+Try asking again after you've taken Econ 101. There is a chip supply shortage and datacenters are willing to pay way more per chip.
+Every consumer card sold is a massive loss in opportunity cost.
+
+Anonymous No.101568708
+>>101568679
+>the fact that you acknowledge basic economic realities means that you are a JEW
+
+Anonymous No.101568718
+>>101568697
+When given more to work with devs just optimize less. This is my place of expertise so you can fuck off.
+
+Anonymous No.101568726
+i kneel
+
+Anonymous No.101568741
+>>101568726
+damn, mistral large2 was a meme after all?
+
+Anonymous No.101568751
+>>101568641
+>really insignificant in the AI space
+It's not at all, it's actually quite mainstream.
+
+Anonymous No.101568752
+>>101568726
+>remove nsfw
+>shit at coding
+>got BTFO'd by a mistral day 1 after release
+What's the point of llama3 again?
+
+Anonymous No.101568758
+>>101568741
+for a 123b model I think it's great for its size, I never expected it to beat a 405b model
+
+Anonymous No.101568759
+>>101568726
+>>101568741
+Just want to clarify that this only texts models on Exercism Python tasks.
+
+Anonymous No.101568762
+>>101568726
+Reminder that deepseek is open source
+We won even if we lost
+
+Anonymous No.101568767
+>>101568741
+nah, just wait until they publish the coom extraction leaderboard
+
+Anonymous No.101568775
+>>101568751
+still, NAI is just a hentai generator, not a porn video generator, and that's what kling could bring to the table
+
+Anonymous No.101568783
+>>101568775
+yeah of course
+
+Anonymous No.101568793
+>>101568726
+>>101568762
+>DeepSeek Coder V2 0724
+When are they going to release this?
+
+Anonymous No.101568808
+>>101568793
+It's too good. They're not going to release it.
+
+Anonymous No.101568821
+>>101568752
+>>101568758
+Read the chart again. Mistral Large 2 is performing on part with 3.1 70B at half its size. 405B is the top open source model by far.
+
+Anonymous No.101568823
+>>101568527
+Kikery or not, its usage has become widespread enough that most English speakers nowadays refer to all minors in the 0-18 age range as "children", justifying calling "pedo" anybody going after even post-puberty teenagers, whether real or fictional--like /lmg/ mascot 16-year-old Miku, for example.
+
+Similarly, when Californian AI companies talk about "child safety" regarding LLM text data, it isn't entirely clear what they mean exactly to me. From the above, I'd expect them to filter away any sexual content involving *any* minor, no matter how sexually developed and aware, which doesn't make sense to my southern European mind.
+
+Anonymous No.101568848
+>>101568808
+this, they only release their worst turds to the public, and desu if I was in their place I would do the same kek
+
+Anonymous No.101568851
+>>101567424
+>alpaca-chat in ST
+I only see Alpaca-Roleplay, Alpaca-Single-Turn, and Alpaca. Do I need to update ST or something?
+
+Anonymous No.101568857
+>>101568609
+"just drawings" are illegal all the same (in the case of cunny), i don't think this is much of an argument. realistic generated videos, are by definition, "just drawings" too.
+
+Anonymous No.101568860
+>>101568823
+tldr
+go to jail pedo
+
+Anonymous No.101568864
+>>101568821
+
+Anonymous No.101568868
+>>101568821
+That is for coding. And if you weren't a vram let and had actually used both 70B 3.1 and large mistral you would know llama is boring and dry as fuck compared to mistral.
+
+Anonymous No.101568878
+>>101568695
+it's only a matter of time, deepfake tech has been around for years. it might not be done by a big corp, but it won't have to with improvements in hardware/techniques.
+
+Anonymous No.101568888
+>>101568857
+>"just drawings" are illegal all the same (in the case of cunny)
+in the us, nope
+
+>realistic generated videos, are by definition, "just drawings" too.
+the FBI made it clear that this would be considered as something that would put you in jail
+
+Anonymous No.101568891
+>>101568868
+Mistral isn't boring and dry because they didn't filter out NSFW. But 405B is going to be much more intelligent.
+
+Anonymous No.101568896
+>>101568823
+>under 16
+Rope
+>under 18
+Tell that to the judge
+>under 23
+Yikes
+>under 26
+Ehh
+
+Anonymous No.101568904
+>>101568864
+in 5 months they improved a lot, can't wait to see Mistral Large 3 in the future
+
+Anonymous No.101568932
+>>101568752
+Is it as based as Nemo or cucked like llama?
+
+Anonymous No.101568949
+>the FBI made it clear that this would be considered as something that would put you in jail
+so it'll be like current CP laws, only enforced on occasion to "make an example" of somebody or to remove a political dissident. this ship will eventually sail, and there will be so much of the stuff that in circulation that it'll be impossible to control
+
+Anonymous No.101568952
+>>101568932
+mistral large is nemo but smart. Its filthy like claude.
+
+Anonymous No.101568956
+>>101568891
+yeah...no nsfw? no thanks
+
+Anonymous No.101568973
+>>101567424
+>first gen
+>""I… I can't do this alone anymore,"" she said, her voice barely above a whisper. "
+Into the trash it goes.
+
+Anonymous No.101568977
+>>101568949
+that's why companies are terrified to make API realistic porn generators, because they know they can't make a filter 100% accurate and there will be some cp generation made, that could mean a big trouble for them, so no one will risk it
+
+Anonymous No.101568978
+>>101568864
+stop posting this chart, they fixed it on the webpage like 1hr after posting
+
+Anonymous No.101568985
+>>101568952
+large is repetitive as fuck, it isn't anything even close to Claude.
+
+Anonymous No.101568997
+>>101568985
+>repetitive as fuck
+Every single time ive seen people say this it was them being retarded with wrong formatting or samplers.
+
+Anonymous No.101568999
+>>101568896
+>under 18
+>Tell that to the judge
+In my state I can raw dog a 16-year-old in a truck stop restroom and it's 100% legal. But I can't marry her because this country is run by kikes who hate Jesus.
+
+Anonymous No.101569002
+>>101568977
+>use bigcorpo's img2img workflow
+>put actual cp picture
+>0.99 denoise
+>try to sue them for the output
+
+Anonymous No.101569011
+>>101568999
+ewww, please stop being disgusting anon.
+nice digits though.
+
+Anonymous No.101569034
+>>101569002
+the company will easily prove that you added a cp picture as the input, that's a great idea if you want to be in jail though kek
+
+Anonymous No.101569042
+>>101568985
+most mistrals are, they're overconfident to hell
+
+Anonymous No.101569056
+>>101569034
+>that's a great idea if you want to be in jail though kek
+reminded me of that retard who decided to put such thing on GPT4V to describe the picture, OpenAI called the cops for that and he went to jail
+
+Anonymous No.101569059
+>>101568355
+>how soon until I can drop $5-10k on some super AI card with 96-128GB VRAM
+You can buy a maxed-out Apple fagbox for about that price range, but don't expect it to be fast - you're basically getting a 3060 with up to 192GB VRAM, and that's the absolute top spec.
+
+Anonymous No.101569079
+>>101569056
+when the red team a lil too red
+
+Anonymous No.101569217
+>>101569056
+That was huge idk why people still used OpenAI's shit after that. They clearly go through your shit manually. I wouldn't surprised if there were two thousand Nigerians sifting through people's ChatGPT logs atm
+
+Anonymous No.101569232
+>>101568896
+This, but unironically. 30+ women are the best.
+
+Anonymous No.101569239
+>>101569217
+>That was huge idk why people still used OpenAI's shit after that. They clearly go through your shit manually.
+That doesn't surprise me at all, the probably use our own interactions with chatgpt to make gpt4 even better, and yeah, that's why local is a must, privacy is absolute
+
+Anonymous No.101569301
+What does this mean?
+
+Anonymous No.101569337
+>>101568639
+Genuinely curious. What is the physical bottleneck for adding more ram onto gpu?
+
+Anonymous No.101569358
+>>101569271
+why are all your gens little girls, not even teens
+
+Anonymous No.101569360
+>>101569337
+>What is the physical bottleneck for adding more ram onto gpu?
+you need to weld some shit, VRAM is extremely sensitive and unstable, not everyone can do that
+
+Anonymous No.101569382
+>>101569219
+theres no way you are not getting v& soon
+like, people high up will show this to THEIR higher ups as an example of how significant this is
+they will fuck you to make an example for sure
+
+Anonymous No.101569396
+>>101568896
+>under 30
+come on you can do better than that
+>above 30
+time to step up champ
+
+Anonymous No.101569407
+>>101568985
+spill tissue
+
+Anonymous No.101569420
+>>101569360
+but then you could ask some nerd to do it for you and he could profit out of it, why wouldn't this work
+
+Anonymous No.101569428
+>>101569360
+Take it away from x050/60/70 and add it to x090?
+
+Anonymous No.101569435
+>>101569396
+I LOVE HAGS
+
+Anonymous No.101569469
+>>101569420
+>>101569428
+I think it should be possible
+https://www.youtube.com/watch?v=ZirKi6P3nlc [Embed]
+
+Anonymous No.101569487
+>>101569435
+2D hags != 3D roastie
+
+Anonymous No.101569518
+>>101569469
+This comes up constantly. The firmware will prevent it from working. The firmware is closed sourced and checked cryptographically. That only worked for the 2070 because you could reflash it with firmware from a similar card with more VRAM already. You cannot do it with a 3090.
+
+Anonymous No.101569526
+>>101569232
+>This, but unironically. 30+ women are the best.
+Except now you have to also accept their poor skin, sagging breasts, fat bodies, tattoos, blown-out snatch, etc...
+
+Anonymous No.101569528
+>>101569219
+What have we done... AI was a mistake.
+
+Anonymous No.101569529
+>>101569217
+>That was huge idk why people still used OpenAI's shit after that
+something something "bad thing" is always justified if it catches a pedo or something
+
+Anonymous No.101569548
+>>101569219
+Is this kling?
+
+Anonymous No.101569550
+>>101569337
+you probably get suicided by jensen himself for even attempting it
+
+Anonymous No.101569599
+>>101569550
+I know you can mod the 2080ti to 22GB, because I have one, and it really does work. 2080 is also mod-able to 16GB. No idea on Ampere cards.
+The problem with doing this yourself is you can't reasonably buy the SDRAM chips to make it worthwhile without worrying they're fakes or pulls that have been given a shitty reball job.
+
+Anonymous No.101569600
+>>101569528
+the good: pedos will be inside genning instead of hurting children
+
+the bad: police will not be able to tell whether CP is AI or not, and will spend months on an investigation trying to figure out where something was filmed only to realize it was AI all along
+
+>>101569548
+>Is this kling?
+yes sir
+
+Anonymous No.101569611
+>>101569528
+All it takes is some karen saying it looks exactly like her daughter, she will get shit done for sure.
+
+Anonymous No.101569613
+>>101569550
+this guy is still alive though kek >>101569469
+
+Anonymous No.101569616
+>>101569435
+Seems to be baked into the model, doesn't it?
+
+Anonymous No.101569642
+>>101569611
+>it looks exactly like her daughter,
+kling has image2video capability, so this WILL happen
+
+Anonymous No.101569649
+>>101569600
+no one will let uggo freaks associate little girls with sexuality through ai genning
+what you're doing will be hard illegal, akin to posting cp
+
+Anonymous No.101569677
+OK here's a more age-appropriate mascot for you.
+
+Anonymous No.101569685
+Meanwhile in vramletland...
+Gemma 2 9b seems sincerely bad for erp. It has a pleasantly natural prose but it is very passive to the point you need to outright tell it what to do and it is somewhat dumb. It's particularly jarring when it tries to copy the user's vocab, like during dirty talk, but uses it wrong.
+I then tried using Nymeria and found it to feel better, more active, but more stilted. Like it was trained on chat logs from a novice roleplayer. Need to test more.
+Any more model recommendations?
+
+Anonymous No.101569721
+>>101569685
+nemostral
+
+Anonymous No.101569723
+>>101569685
+Why not try Nemo then?
+
+Anonymous No.101569726
+I wish I understood why people coom their pants so much for gemma. I should be loving it cause I have just 1x4090 but I tried it a few times and it is a bigger disappointment than l3-8B
+
+Anonymous No.101569756
+>>101569726
+how complex are your cards
+
+Anonymous No.101569757
+>>101569685
+why the fuck are you still using gemma2
+use nemo
+>12b is too much
+use gguf
+>too much
+not possible
+q5 is 8.5gb
+>i got 6gb vram
+get a job
+
+Anonymous No.101569762
+>>101569721
+>>101569723
+Is it available on gguf already? Everything working fine?
+
+Anonymous No.101569781
+>>101569762
+with up2date llama.cpp or kobold yes
+
+Anonymous No.101569784
+>>101569756
+5/10?
+
+Anonymous No.101569786
+>>101569757
+I have 4GB and it runs great for me. llama.cpp reallly has made some progress over the past year. Look out for imatrix quants specifically.
+
+Anonymous No.101569791
+>>101569649
+>what you're doing will be hard illegal, akin to posting cp
+lmao if moms on instagram aren't going to jail for making videos of their real life children, then nothing here will be considered CP, not even close
+
+>>101569677
+haggu my beloved
+
+Anonymous No.101569794
+>>101569762
+https://huggingface.co/bartowski/Mistral-Nemo-Instruct-2407-GGUF
+
+Anonymous No.101569801
+>>101569677
+blasphemous image
+
+Anonymous No.101569802
+https://x.com/GroqInc/status/1816546864625516653
+
+llama 70b vs GPT4o vs GPT4o mini
+
+On Street fighter gameplay
+
+Anonymous No.101569816
+>>101569784
+gemmas dry but i think its way smarter than 8 l3, and on less demanding cards or scenarios writing is what mostly matters
+ergo, go and give mythomax a go too
+
+Anonymous No.101569819
+>>101569677
+burnt out hippie miku who took too much acid in the 60s/70s and is now a little off-kilter
+
+Anonymous No.101569824
+since nvidia is fully going open source for their drivers will this improve mods?
+
+imagine 3090s with 48GB VRAM
+
+Anonymous No.101569840
+>>101569781
+>>101569794
+Sweet. I'll try it later today and see how it goes. Thanks, anons.
+
+Unrelated but I've been meaning to ask, how do people format their persona? Fo you even bother to write more than bare minimum description?
+
+Anonymous No.101569842
+>>101569802
+llamaCHADS
+
+Anonymous No.101569843
+>>101569824
+drivers != firmware
+
+Anonymous No.101569845
+>>101569802
+New benchmark? lol
+
+Anonymous No.101569849
+>>101569802
+lol kino
+cool benchmark, Mistral Large 2 vs L3.1 405B vs GPT4o vs Sonnet 3.5 would be funny
+
+Anonymous No.101569864
+>>101569845
+Hilariously, yes. Real world benchmark like these needs to happen more often
+
+Anonymous No.101569866
+>I can't run big models, it's so over
+just get a Mac
+>b-but I am too poor for Apple
+get a job
+
+Anonymous No.101569882
+>>101569866
+this
+>Sent from my Macbook Pro
+
+Anonymous No.101569885
+Anons running Mistral Large, what GPU(s) do you have?
+
+Anonymous No.101569887
+>>101569843
+as someone with no idea
+I understand firmware is embedded into a physical memory in the GPU, cant that memory be changed?
+
+Anonymous No.101569896
+>>101569885
+two rtx 3090 and triple digit ram :3
+just be patient bwo
+
+Anonymous No.101569903
+>>101569885
+>>101569882
+
+Anonymous No.101569906
+i don't understand the point of parameters that are 1.5b or 0.5b. the results i get out of them are downright schizophrenic
+
+Anonymous No.101569907
+>>101569882
+based
+t. Macbook Pro owner
+it feels nice running models others can't, get a $20000 GPU I guess
+
+Anonymous No.101569914
+>>101569802
+2 monkeys on typewriters having a rap battle vibe
+
+Anonymous No.101569917
+>>101569906
+The lower the param, the less complex your prompts have to be
+
+Anonymous No.101569923
+>>101569843
+isn't this what's going on with amd too?
+
+Anonymous No.101569948
+>>101569358
+>why are all your gens little girls, not even teens
+no idea, I prompted for "young teen girl"
+
+>>101569382
+kling has image2video, if anything I'm an example of how pedos have basically no excuse to consume real content anymore unless they're into the idea of a real child being exploited sexually (which, to be fair, a lot of them are)
+
+Anonymous No.101569953
+>>101569802
+Kek
+
+Anonymous No.101569964
+how do i know what template to use in sillytavern without having to ask other people?
+
+Anonymous No.101569982
+>>101569964
+Wait 2 years until this is standardized.
+
+Anonymous No.101569989
+>>101569948
+>pedos have basically no excuse to consume real content anymore
+that's great if they stop funding real content, but the remaining problem is that they train their brain to sexualize real kids
+this has effects on how they see real kids once they step outside their goon cave
+this is what the big guys wanna prevent
+
+Anonymous No.101569991
+>>101569948
+stop posting this shit pedo
+
+Anonymous No.101570018
+>>101569964
+How do you think everyone else learns? Have you never learned something without being taught? Have you learned anything from the replies you get?
+
+Anonymous No.101570026
+>>101569948
+do whatever you want fren
+
+Anonymous No.101570027
+>>101569989
+>real kids once they step outside their goon cave
+I am not into kids but there is zero chance I will step out of my goon cave to have sex with someone.
+
+Anonymous No.101570031
+https://www.washingtonpost.com/opinions/2024/07/25/sam-altman-ai-democracy-authoritarianism-future/
+Op-ed by Sam Altman
+Says companies need to work together to build security so model weights don't leak
+also
+>Third, we must develop a coherent commercial diplomacy policy for AI, including clarity around how the United States intends to implement export controls and foreign investment rules for the global build out of AI systems. That will also mean setting out rules of the road for what sorts of chips, AI training data and other code — some of which is so sensitive that it may need to remain in the United States — can be housed in the data centers that countries around the world are racing to build to localize AI information.
+wants it to be illegal for high end chips, AI code, training data to leave the US
+
+Anonymous No.101570044
+>>101570031
+SAVE US ZUCC
+
+Anonymous No.101570049
+>>101570018
+>Have you learned anything from the replies you get?
+Why are we still here?
+
+Anonymous No.101570054
+>>101570031
+>lets not compete with each other
+>come join my company
+NOPE. No one trusts the backstabbing jew
+
+Anonymous No.101570058
+>>101569989
+ah yes, the "violent videogames" argument
+
+>>101569991
+why do pretty young girls make you so angry?
+
+>>101570031
+>wants it to be illegal for high end chips, AI code, training data to leave the US
+i'm not worried
+zuckerberg (who outranks altman in jewishness) already said in HIS op-ed that there's no point of putting export controls on weights
+
+Anonymous No.101570059
+What sampler settings are other people using with Mistral NeMo 12B? I'm using min-p 0.008, top-p 0.99, and temperature 1 (instead of 0.3 like officially recommended).
+
+I just finished a short scenario (15 generated messages / 14 from me / 5169 total tokens including 818 of context) and I found it stayed cogent the whole way through but I couldn't find an effective way to instruct it not to end messages with some variation of "What will you do next?" IDK if this is a general instruction following problem.
+
+Anonymous No.101570060
+>>101570031
+May Zuck strike down this anti capitalist
+
+Anonymous No.101570067
+>>101570031
+>losing to anthropic and now local models
+>everything is delayed, even search doesnt have a release date
+>everyone is quickly starting to get sick of sam
+>can only coast along on baseless hype
+>hemorrhaging money
+>even microsoft is starting to pull away due to regulatory reasons
+
+OpenAI is going the way of the dodo at record speed.
+
+Anonymous No.101570073
+>>101570058
+>who outranks altman in jewishness
+kek but how
+
+Anonymous No.101570075
+>>101570031
+Based!?
+
+Anonymous No.101570081
+>>101570049
+I never asked anything. And i try to help people when i can. Some people are just too dumb to do their own tests.
+
+Anonymous No.101570095
+>>101562363 →
+I'm not asking about how to use a local SD model.
+I'm asking about the diffusion equivalent for just importing https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/modeling_llama.py and subjugating it with .forward().
+
+Anonymous No.101570116
+>>101570073
+zuckerberg has 10x the shekels of altman
+openai makes 2 billion(?) in revenue and is unprofitable while zuck makes many times more than that and like 50 billion in profit
+
+also zuck has an asian wife (highly coveted in the jewish community) and could beat up altman in a fight. hes jacked
+
+Anonymous No.101570131
+>>101570095
+Unironically ask ChatGPT or Claude 3.5
+
+Anonymous No.101570164
+>>101570095
+anon i just used your post as a thinly-veiled excuse to post two cute girls sucking on some ice cream, i thought that was blatantly obvious
+go ask an AI like the other anon said
+
+Anonymous No.101570192
+>>101569420
+because you would need a bios that worked with the extra ram. Not something joe smoe can whip up. People already tried using ada 6000's bios with modded 3090s and failed
+
+Anonymous No.101570219
+>>101570192
+failed why?
+
+Anonymous No.101570228
+>>101570192
+On Turing you just move some resistors. Presumably it's harder than that on newer cards or it would have been done already.
+
+Anonymous No.101570234
+>j-just searchGPT it
+"No!"
+
+Anonymous No.101570238
+>>101570219
+
+>>101569518
+
+Anonymous No.101570254
+>>101570234
+i still see this tech as a fun toy and hate that it's being shoved into everything
+
+Anonymous No.101570272
+>>101570238
+then why did they try at all if it was obviously impossible?
+
+Anonymous No.101570277
+>>101570234
+is that legal, what's stopping some polchuds to do the same with nazi shit
+
+Anonymous No.101570284
+>>101570272
+How do you think people found out that it wasn't possible?
+
+Anonymous No.101570324
+>>101570234
+For some values of "woman"
+
+Homework exercise:
+Solve for "woman" where chromosomes = XY
+
+Anonymous No.101570339
+>>101570277
+>what's stopping some polchuds to do the same with nazi shit
+troons are backed up by jews, not the polfags
+
+Anonymous No.101570436
+>>101570254
+>i still see this tech as a fun toy and hate that it's being shoved into everything
+today I asked bing if the what the US citizens use as an ID and it responded me with shit like "recently, non binary people can have an ID with a gender neutral setting", like wtf, can't they leave me alone for 5 fucking seconds? it's fucking everywhere now, in movies, games, tv shws, LLMs...
+
+Anonymous No.101570440
+is context shift + kv cache quantization impossible?
+
+Anonymous No.101570457
+You'd need a lot of space on your storage and power to finetune video based off a bunch of movies
+
+Anonymous No.101570473
+It's 10 years into the future, you can have a brain chip installed into your head that allows an AI to do what you want by simply thinking about what you want it to achieve and it will do everything it can to achieve this goal. Do you install the chip, or do you keep it separated onto a machine that you have to type or talk to instead?
+
+Anonymous No.101570478
+>>101570457
+its peanuts in terms of cost compared to the amount of compute you'd need
+
+Anonymous No.101570482
+>>101569948
+Can you fuck off already?
+This has nothing to do with local models.
+
+Anonymous No.101570502
+>>101570440
+works in llama.cpp
+
+Anonymous No.101570507
+>>101570473
+obviously keep it separated. i'd just wear and talk to the cunny glasses that zuck is building
+
+Anonymous No.101570525
+>>101570482
+>This has nothing to do with local models.
+this is a miku general and miku is 16 so posting teen girls is more on topic than whatever nerd shit you're discussing
+
+Anonymous No.101570527
+>>101570473
+tranny image
+
+Anonymous No.101570529
+>>101570473
+There's a lot of missing information that would be critical to whether one should make that decision or not.
+
+Anonymous No.101570532
+>>101570502
+damn, that one doesn't detect my GPU for whatever reason
+
+Anonymous No.101570552
+Just in case it's not obvious: the pedo spammer, petra spammer, and blacked Miku spammer are all the same person.
+
+Anonymous No.101570553
+>>101570473
+Can I have it hanging from a wire in my head? If shit ever goes south I can cut the wire and that'd be it
+
+Anonymous No.101570598
+>>101570532
+linux and amd?
+
+Anonymous No.101570610
+>>101570553
+>Pranking tech bro's by cutting their AI disconnect wire as you walk past them in the streets.
+
+Anonymous No.101570614
+Erm guys, how much vram do I need to have waifusex with llama 3.1 405B?
+
+Anonymous No.101570622
+>>101570552
+that isn't spam in my book
+
+Anonymous No.101570623
+>>101570552
+Do you honestly believe there is only one degenerate here?
+
+Anonymous No.101570631
+>>101570552
+this is an imageboard, anon
+replying to people with an image attached is not "spam"
+
+Anonymous No.101570636
+>>101570473
+What if "brain chips" are a meme? So far most human tools are used using your hands. Or your sense organs.
+
+Anonymous No.101570640
+>can fit mistral-large 5.0bpw with 64k context and still have 3.5gb to spare
+we're so fucking back bros
+God bless the french
+
+Anonymous No.101570645
+>>101570631
+this is a video though. Time to leave :(
+
+Anonymous No.101570650
+>>101570598
+linux and nvidia
+it works fine on kobold and exllamav2
+
+Anonymous No.101570667
+>>101570645
+what is a video if not a collection of images played sequentially you braindead nigger
+how did you even solve the captcha
+
+Anonymous No.101570694
+>>101570623
+No but I honestly believe that there is one very autistic person with too much time on their hands here.
+
+Anonymous No.101570708
+>>101570650
+do you compile yourself? if so the flag to enable cuda is different on llama.cpp compared to koboldcpp uses the now deprecated (on llama) "make LLAMA_CUBLAS=1" while llama now uses "make GGML_CUDA=1"
+
+Anonymous No.101570759
+>>101570631
+What the fuck is wrong with her skin? Is this AI generated?
+
+Anonymous No.101570794
+>>101570708
+nope, I assumed the build on github had cuda enabled but now I noticed the "not compiled with GPU offload support" warning
+I'll try to compile it myself, thanks
+
+Anonymous No.101570829
+>>101570759
+>What the fuck is wrong with her skin?
+she was born grayscale and underwent technicolor treatment
+
+>Is this AI generated?
+no i have an extensive collection of beautiful children with rare deformities that i like posting on 4chan
+
+Anonymous No.101570839
+>>101570552
+>the pedo spammer, petra spammer, blacked Miku spammer and .>>101570552 are the same person
+Fixed for ya.
+
+Anonymous No.101570856
+>>101570694
+Yes. It is (you)
+
+Anonymous No.101570857
+>>101570759
+>Is this AI generated?
+
+Anonymous No.101570913
+>>101570839
+Haha you kids sure are havin' fun with the lil' local models we made you. Me 'an Mike *oh wait, right right* ahem Miku here have been having a blast reading all your funny posts!
+
+Anonymous No.101570929
+>>101567223 (OP)
+when is apple going to release a new mac studio that can handle higher end models, the current one with maxxed out ram doesn't cut it anymore
+
+Anonymous No.101570940
+>>101570929
+Who knows, people who already buy apple products are already locked into the apple ecosystem so they don't have much need to innovate.
+
+Anonymous No.101570978
+>>101570913
+im having a lot of fun with my little models
+especially now that I think i found out how to confuse the filter a bit: change the lighting conditions
+is this what it felt like wrangling dall-e when it first came out?
+
+Anonymous No.101570994
+>>101570978
+How are you able to create that, asides from the pedo shit, I'm kinda surprised that shit doesn't have any filters on what you can prompt
+
+Anonymous No.101570996
+Ah fuck... everything in exllamav2/exllamav2/conversion/ is fucked up with the following python error:
+File "/home/derp/.conda/envs/exllamav2/lib/python3.10/site-packages/pandas/_config/config.py", line 540, in register_option
+    if not re.match("^" + tokenize.Name + "$", k):
+AttributeError: partially initialized module 'tokenize' has no attribute 'Name' (most likely due to a circular import)
+
+Only in that path though. The rest of the python in other paths is fine - if it has "--help" it can show it. Yes I am using a conda environment specific to exllamav2.
+
+Anonymous No.101571017
+>>101570994
+> I'm kinda surprised that shit doesn't have any filters
+He literally talked about bypassing the filter in that very post you neuron deficient moron.
+
+Anonymous No.101571018
+>>101570978
+Yeah... that's pretty kimo-kimo dotei-level cringe.
+
+Anonymous No.101571022
+>>101570994
+>How are you able to create that
+i go on klingai.com with a disposable email and i type in
+
+>At a beach bonfire, a lovely young Russian teen girl relaxes on a blanket, her strapless swimsuit glowing in the firelight. Her bare legs are stretched out beside her, with her feet resting on the sand. Her beautiful detailed face beams with warmth and happiness, capturing the magical ambiance of the evening.
+
+and then I press submit and maybe "Try Again" a few times and then I post it on 4chan
+
+Anonymous No.101571043
+>>101571017
+I'm sorry, but as an AI language model, I cannot have a conversation with niggers
+
+Anonymous No.101571046
+>>101571017
+im assuming he's talking about filters for the text in the prompt itself like luma does
+kling actually does have text filters too, but it doesnt seem to be run through any sentiment analysis so if you just write euphemisms or abstractly write the situation it doesn't pre-filter you and it runs the gen
+and if it fails it refunds your credits so you get to waste china's money while you gen cute girls :D
+
+Anonymous No.101571096
+>>101570978
+How is this okay!? MODS!?
+
+Anonymous No.101571106
+>>101567223 (OP)
+Question desu, what's the best Coom/RP model for 16gb of vram? I've been trying a few I've found, but a lot of them are either schizophrenic or just bad
+
+Anonymous No.101571115
+>>101571022
+based
+
+Anonymous No.101571117
+Anyone here want to share their mistral large preset? I am using it through their api.
+
+Anonymous No.101571131
+>>101571106
+Try nemo and its finetunes.
+Those are working pretty good.
+Also, which have been the ones you've tried?
+
+Anonymous No.101571204
+>>101571131
+>its finetunes.
+nta but have you tried any good finetunes for it? I always stick with the base models so I don't try any finetunes
+
+Anonymous No.101571215
+>>101571204
+Buy an ad
+
+Anonymous No.101571225
+>>101571204
+I wonder at this point what finetunes are even trying to improve, to be honest.
+
+Anonymous No.101571244
+>>101571204
+So far, I think that the official instruct is the best one, dory is kind of shit, and mini-magnum is anout the same, if not a little worse generally, than the official instruct.
+I'm yet to try dolphin.
+
+Anonymous No.101571254
+>failed to build
+I hate python.
+I hate python.
+I hate python.
+
+Anonymous No.101571261
+>>101571204
+I usually stick to Sao tunes, they are usually fine.
+
+Anonymous No.101571266
+>>101571254
+I do too.
+Not the language, but the package hell.
+Same with node.
+Post the error message and stack trace.
+
+Anonymous No.101571277
+I need (you) to look at this image for me real quick.
+Thanks for looking at it, love you bye.
+
+Anonymous No.101571289
+>>101571215
+You gotta be a bot
+
+>>101571225
+That's why I don't use them, I used gemma 9b and tried drummer's finetunes, ended up dissapointed so I stopped trying finetunes
+
+Anonymous No.101571377
+>>101571277
+That's actually kinda cute, anon. Reminds me of my sister's watercolor paintings.
+
+Anonymous No.101571381
+>>101571277
+I this Miku
+
+Anonymous No.101571390
+>>101571366 →
+>>101571366 →
+>>101571366 →
+
+Anonymous No.101571398
+>>101571266
+Yeah.
+It's OK I just fixed it thanks to an LLM.
+
+Anonymous No.101571409
+>>101569677
+It's okay you can keep seething.
+
+Anonymous No.101571437
+>>101571266
+I highly recommend using conda. It's a little wasteful on space, since every env has to download it's own copies of things, but it's far better than destroying your base system python with an unfixable dependency mess.
+
+Anonymous No.101571568
+Karpathy and a handful of people has raised the issue of tokenization in Transformers recently with the "is 9.11 larger than 9.9?" meme question. LLama 3.1 uses a new tokenization method that has improved compression of text. A month ago there was a research into new tokenization method in FAIR (multi-token prediction used in Meta Chameleon) but the Llama 3 paper didn't mention this at all. So are we led to believe that no one from any of the AI labs are collaborating (at least publicly known) to solve the tokenization issue? Or is everyone just focused on scaling and dataset quality?
+
+Anonymous No.101571597
+>>101571409
+Cheesy
+
+Anonymous No.101571605
+Who is the naughtiest botmakie?
+
+Anonymous No.101571712
+>>101571605
+Buy an ad.
+
+Anonymous No.101571865
+Is this scientific proof that all finetunes are the same?
+
