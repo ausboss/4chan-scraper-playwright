@@ -4,8 +4,8 @@ This project is a Node.js application that extracts posts from the most popular 
 
 ## Features
 
-- Flexibly search for threads on any 4chan board
-- Specify multiple subject texts to match threads
+- Flexibly search for 'general' threads on any 4chan board
+- Specify multiple subject texts to match threads subject line
 - Automatically finds the most popular matching thread
 - Extracts all posts from the thread, including text and image information
 - Returns the extracted data as a formatted string
@@ -84,18 +84,21 @@ This will execute the script and print the extracted posts to the console.
 
 ### Examples
 
-1. To search for AI-related threads on /g/:
+1. To scrape the local models general thread on /g/:
 
    ```javascript
    const extractedText = await extract4chanThread("g", [
-     "AI",
-     "Artificial Intelligence",
+     "/lmg/",
+     "Local Models General",
    ]);
    ```
 
-2. To search for game recommendation threads on /v/:
+2. To scrape the Fortnite General on /vg/:
    ```javascript
-   const extractedText = await extract4chanThread("v", ["Recommend", "WAYRPG"]);
+   const extractedText = await extract4chanThread("vg", [
+     "/fng/",
+     "Fortnite General",
+   ]);
    ```
 
 ## License
